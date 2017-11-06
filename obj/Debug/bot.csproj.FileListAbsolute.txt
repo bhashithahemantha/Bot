@@ -16,12 +16,9 @@ c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Sys
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Autofac.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.Bot.Builder.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.Bot.Connector.xml
-c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
-c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.Rest.ClientRuntime.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Microsoft.WindowsAzure.Configuration.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\Newtonsoft.Json.xml
-c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\System.IdentityModel.Tokens.Jwt.pdb
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\System.IdentityModel.Tokens.Jwt.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\System.Net.Http.Formatting.xml
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\System.Web.Http.xml
@@ -37,3 +34,21 @@ c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\bin\zh-
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\obj\Debug\bot.csprojResolveAssemblyReference.cache
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\obj\Debug\Bot Application1.dll
 c:\users\bashitha.hemantha\documents\visual studio 2015\Projects\bot\bot\obj\Debug\Bot Application1.pdb
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\Antlr3.Runtime.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Helpers.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Mvc.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Optimization.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Razor.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.Razor.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\WebGrease.dll
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\Antlr3.Runtime.pdb
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Helpers.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Mvc.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Optimization.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.Razor.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Bashitha.Hemantha\Documents\Visual Studio 2015\Projects\bot\bot\bin\System.Web.WebPages.Razor.xml
