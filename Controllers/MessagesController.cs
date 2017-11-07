@@ -1,74 +1,22 @@
 ﻿using System;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
-using Newtonsoft.Json;
 using Microsoft.Bot.Builder.Dialogs;
-using System.Text;
 
 namespace bot
 {
     [BotAuthentication]
     public class MessagesController : ApiController
     {
-        /// <summary>
-        /// POST: api/Messages
-        /// Receive a message from a user and reply to it
-        /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-            // Global values
-            bool boolAskedForUserName = false;
-            string strUserName = "";
-
             if (activity.Type == ActivityTypes.Message)
             {
-                //get any saved values
-                StateClient sc = activity.GetStateClient();
-                BotData userData = sc.BotState.GetPrivateConversationData(activity.ChannelId, activity.Conversation.Id, activity.From.Id);
-                boolAskedForUserName = userData.GetProperty<bool>("AskedForUserName");
-                strUserName = userData.GetProperty<string>("UserName") ?? "";
-
-                //create text for a reply msg
-                StringBuilder strReplyMessage = new StringBuilder();
-                if (boolAskedForUserName == false)//if never asked for name
-                {
-                    strReplyMessage.Append($"Hello, I am testing bot...");
-                    strReplyMessage.Append($"\n");
-                    strReplyMessage.Append($"You can say anything to me.");
-                    strReplyMessage.Append($"\n");
-                    strReplyMessage.Append($"and I will repeat it..");
-                    strReplyMessage.Append($"\n");
-                    strReplyMessage.Append($"What is your Name ?");
-                    //set BotUserData
-                    userData.SetProperty<bool>("AskedForUserName", true);
-                }
-                else //if have asked for name
-                {
-                    if (strUserName == "") //name was never provided before
-                    {
-                        //if we have asked for a username and it has not been set,the current response is the user name
-                        strReplyMessage.Append($"Hello, {activity.Text}...!");
-                        //set BotUserData
-                        userData.SetProperty<string>("UserName", activity.Text);
-
-                    }
-                    else //name was provided
-                    {
-                        strReplyMessage.Append($"{strUserName}, You said: {activity.Text}");
-                    }
-                }
-                //save BotUserData
-                sc.BotState.SetPrivateConversationData(activity.ChannelId, activity.Conversation.Id, activity.From.Id, userData);
-                //create a repaly message
-                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-                Activity replyMessage = activity.CreateReply(strReplyMessage.ToString());
-                await connector.Conversations.ReplyToActivityAsync(replyMessage);
-                }
+                await Conversation.SendAsync(activity, () => new LuisDialog());
+            }
             else
             {
                 Activity replyMessage = HandleSystemMessage(activity);
@@ -82,24 +30,13 @@ namespace bot
             var response = Request.CreateResponse(HttpStatusCode.OK);
             return response;
         }
-        
+
+
         private Activity HandleSystemMessage(Activity message)
         {
             if (message.Type == ActivityTypes.DeleteUserData)
             {
-                // Get BotUserData
-                StateClient sc = message.GetStateClient();
-                BotData userData = sc.BotState.GetPrivateConversationData(message.ChannelId, message.Conversation.Id, message.From.Id);
-                // Set BotUserData
-                userData.SetProperty<string>("UserName", "");
-                userData.SetProperty<bool>("AskedForUserName", false);
-                // Save BotUserData
-                sc.BotState.SetPrivateConversationData(message.ChannelId, message.Conversation.Id, message.From.Id, userData);
-                // Create a reply message
-                ConnectorClient connector = new ConnectorClient(new Uri(message.ServiceUrl));
-                Activity replyMessage = message.CreateReply("Personal data has been deleted.");
-                return replyMessage;
-
+                
             }
             else if (message.Type == ActivityTypes.ConversationUpdate)
             {
